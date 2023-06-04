@@ -8,7 +8,9 @@ export default function App() {
   return (
     <>
       <Header />
-      {notes.map(palet => <Note key={palet.id} title={palet.title} content={palet.content} />)}
+      {notes.map((palet) => (
+        <Note key={palet.key} title={palet.title} content={palet.content} />
+      ))}
       <Footer></Footer>
     </>
   );
