@@ -2,12 +2,13 @@ import React from "react";
 import Header from "./components/header";
 import Footer from "./components/footer";
 import Note from "./components/note";
+import notes from "./notes";
 
 export default function App() {
   return (
     <>
       <Header />
-      <Note title="Fezaan" content="Is a noob" />
+      {notes.map(palet => <Note key={palet.id} title={palet.title} content={palet.content} />)}
       <Footer></Footer>
     </>
   );
